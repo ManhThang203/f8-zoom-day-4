@@ -3,143 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/form.css">
+    <title>Register</title>
 </head>
 <body>
     <div class="content">
-        <h1>Đăng Ký</h1>
+        <h1>Register</h1>
     </div>
     <form action="">
-            <div class="form">
+        <div class="form">
+            <label>
+                <span>Full Name</span>
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="Enter your full name..." 
+                    minlength="4"
+                    maxlength="20"
+                    autocomplete="off"
+                    required 
+                    spellcheck="false"
+                />
+            </label>
+            <br />
+            <label>
+                <span>Email</span>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Enter your email..." 
+                    minlength="4"
+                    maxlength="20"
+                    autocomplete="off"
+                    required
+                />
+            </label>
+            <br />
+            <label>
+                <span>Phone Number</span>
+                <input 
+                    type="number" 
+                    id="number" 
+                    name="number" 
+                    placeholder="Enter your phone number..." 
+                    required
+                    autocomplete="off"
+                />
+            </label>
+            <br />
+            <label>
+                <span>Password</span>
+                <input 
+                    type="password" 
+                    id="pass" 
+                    name="password" 
+                    placeholder="Enter password..." 
+                    minlength="8" 
+                    required 
+                    autocomplete="off"
+                />
+            </label>
+            <br />
+            <label>
+                <span>Confirm Password</span>
+                <input 
+                    type="password" 
+                    id="confirm-pass" 
+                    name="confirm-password" 
+                    minlength="8" 
+                    placeholder="Confirm password..." 
+                    required 
+                    autocomplete="off"
+                />
+            </label>
+            <br />
+            <label>
+                <span>Gender</span>
+                <br/>
+                <input type="radio" name="gender">Male<br />
+                <input type="radio" name="gender">Female<br />
+                <input type="radio" name="gender">Other<br />
+            </label>
+            <br />
+            <label>
+                <span>Date of Birth</span>
+                <input 
+                    type="date" 
+                    id="birthday" 
+                    name="birthday"
+                >
+            </label>
+            <br />
+            <label>
+                <span>Address</span>
+                <input 
+                    type="text" 
+                    id="address" 
+                    name="address" 
+                    placeholder="Enter your address"
+                    autocomplete="off"
+                >
+            </label>
+            <br />
+            <label for="avatarInput">
+                <span>Profile Picture</span><br>
+                <div class="avatar-placeholder" id="avatarDisplay"></div>
+            </label>
+            <input type="file" id="avatarInput" accept="image/*">
+            <br />
+            <fieldset>
+                <legend>Communication Preferences</legend> 
                 <label>
-                    <span>Họ và tên</span>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        id="name" 
-                        placeholder="Nhập họ và tên..." 
-                        minlength="4"
-                        maxlength="20"
-                        autocomplete="off"
-                        required 
-                        spellcheck="false"
-                        />
-                </label>
-                <br />
+                    <input type="checkbox" name="communication[]" value="newsletter">
+                    Subscribe to Newsletter
+                </label><br>
                 <label>
-                    <span>Email</span>
-                    <input 
-                        type="email" 
-                        name="eamil" 
-                        id="email" 
-                        placeholder="Nhập email của bạn..." 
-                        minlength="4"
-                        maxlength="20"
-                        autocomplete="off"
-                        required
-                        
-                        />
-                </label>
-                <br />
+                    <input type="checkbox" name="communication[]" value="promotions">
+                    Receive Promotional Emails
+                </label><br>
                 <label>
-                    <span>Phone Number</span>
-                    <input 
-                        type="number" 
-                        id="number" 
-                        name="number" 
-                        placeholder="Nhập Phone Number..." 
-                        required
-                         autocomplete="off"
-                        />
+                    <input type="checkbox" name="communication[]" value="updates">
+                    Get Product Updates
                 </label>
-                <br />
-                <label>
-                    <span>Password</span>
-                    <input 
-                        type="password" 
-                        id="pass" 
-                        name="password" 
-                        placeholder="Nhập Password..." 
-                        minlength="8" 
-                        required 
-                        autocomplete="off"
-                        />
-                </div>
-                </label>
-                <br />
-                <label>
-                    <span>Confirm Password</span>
-                    <input 
-                        type="password" 
-                        id="pass" 
-                        name="password" 
-                        minlength="8" 
-                        placeholder="Nhập Confirm Password..." 
-                        required 
-                        autocomplete="off"
-                        />
-                </div>
-                </label>
-                <br />
-                <label>
-                    <span>Gender</span>
-                    <br/>
-                    <input type="radio" name="gender">Male<br />
-                    <input type="radio" name="gender">Female<br />
-                    <input type="radio" name="gender">Other<br />
-                </label>
-                <br />
-                <label>
-                    <span>Date of Birth</span>
-                    <input 
-                        type="date" 
-                        id="birthday" 
-                        name="birthday"
-                        >
-                </label>
-                <br />
-                <label>
-                    <span>Address</span>
-                    <input 
-                        type="text" 
-                        id="address" 
-                        name="address" 
-                        placeholder="Enter your address"
-                        autocomplete="off"
-                        >
-                </label>
-                <br />
-                <label for="avatarInput">
-                    <span>Profile Picture</span><br>
-                    <div class="avatar-placeholder" id="avatarDisplay"></div>
-                  </label>
-                  <input type="file" id="avatarInput" accept="image/*">                  
-                <br />
-                <fieldset>
-                    <legend>Communication Preferences</legend> 
-                    <label>
-                      <input type="checkbox" name="communication[]" value="newsletter">
-                      Subscribe to Newsletter (Nhận bản tin định kỳ)
-                    </label><br>
-                  
-                    <label>
-                      <input type="checkbox" name="communication[]" value="promotions">
-                      Receive Promotional Emails (Nhận thông tin khuyến mãi)
-                    </label><br>
-                  
-                    <label>
-                      <input type="checkbox" name="communication[]" value="updates">
-                      Get Product Updates (Nhận cập nhật sản phẩm mới)
-                    </label>
-                  </fieldset>
-                <br />
-            </div>
-            <div class="btn">
-                <Button type="submit">Submit</button>
-                <Button type="reset">Reset</button>
-            </div>
+            </fieldset>
+            <br />
+        </div>
+        <div class="btn">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
     </form>
 </body>
 </html>
